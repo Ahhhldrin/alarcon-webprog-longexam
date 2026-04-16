@@ -1,0 +1,39 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800&family=Inter:wght@400;500;600;700;800&display=swap");
+@import "tailwindcss";
+
+@layer base {
+  body {
+    @apply bg-zinc-100 text-zinc-900 antialiased;
+    font-family: "Inter", Arial, sans-serif;
+  }
+
+  #root {
+    @apply min-h-screen;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  button {
+    font-family: "Barlow Condensed", "Inter", Arial, sans-serif;
+    letter-spacing: 0.02em;
+  }
+}
+
+@keyframes authRouteEnter {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.auth-route-enter {
+  animation: authRouteEnter 320ms ease-out both;
+}
